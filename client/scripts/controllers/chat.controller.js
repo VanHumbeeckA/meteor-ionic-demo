@@ -79,7 +79,7 @@ function ChatCtrl ($scope, $reactive, $stateParams, $ionicScrollDelegate, $timeo
   	messages: function() {
       return Messages.find({ chatId: chatId });
     },
-    data() {
+    data: function() {
       return Chats.findOne(chatId);
     }
   });

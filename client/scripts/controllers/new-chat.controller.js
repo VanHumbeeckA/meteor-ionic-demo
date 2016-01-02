@@ -25,13 +25,16 @@ function NewChatCtrl($scope, $reactive, $state, NewChat) {
   function newChat(userId) {
     let chat = Chats.findOne({ type: 'chat', userIds: { $all: [Meteor.userId(), userId] } });
     if (chat) {
-      return goToChat(chat._id);
+      return goToChat(null, chat._id);
     }
  
     Meteor.call('newChat', userId, goToChat);
   }
  
-  function goToChat(chatId) {
+  function goToChat(error, chatId) {
+    if (error) {
+      console.log('error:', error);
+    }
     hideNewChatModal();
     return $state.go('tab.chat', { chatId: chatId });
   }

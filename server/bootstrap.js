@@ -7,21 +7,21 @@ Meteor.startup(function () {
     'username': 'Andries',
     'email': '44bef262@opayq.com',
     'password': 'aaabbb',
-    'profile': 'Andries'
+    'profile': {name: 'Andries'}
   });
 
   Accounts.createUser({
     'username': 'Bert',
     'email': '5079478f@opayq.com',
     'password': 'aaabbb',
-    'profile': 'Bert'
+    'profile': {name: 'Bert'}
   });
 
   Accounts.createUser({
     'username': 'Carl',
     'email': '257bedde@opayq.com',
     'password': 'aaaccc',
-    'profile': 'Carl'
+    'profile': {name: 'Carl'}
   });
 
   // Accounts.createUserWithPhone({
