@@ -1,0 +1,18 @@
+<ion-view title="Your phone number">
+  <ion-nav-buttons side="right">
+    <button ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0" class="button button-clear button-positive">Done</button>
+  </ion-nav-buttons>
+  <ion-content class="login">
+    <div class="text-center instructions">
+      Please enter username and password
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <input ng-model="logger.username" type="text" placeholder="Your username">
+      </label>
+      <label class="item item-input">
+        <input ng-model="logger.password" on-return="logger.login()" type="password" placeholder="Your password">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
