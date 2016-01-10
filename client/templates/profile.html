@@ -5,11 +5,11 @@
  
   <ion-content class="profile">
     <a class="profile-picture positive" ng-click="profile.updatePicture()">
-      <div ng-if="profile.currentUser.profile.picture">
-        <img ng-src="{{ profile.currentUser.profile.picture }}" alt="profile picture">
+      <div ng-if="profile.userProfile.picture">
+        <img data-ng-src="{{ profile.userProfile.picture }}" alt="profile picture">
         edit
       </div>
-      <div ng-if="!profile.currentUser.profile.picture" class="upload-placehoder">
+      <div ng-if="!profile.userProfile.picture" class="upload-placehoder">
         Add photo
       </div>
     </a>

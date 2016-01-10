@@ -1,0 +1,23 @@
+<ion-view title="buttons-demo">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                Ranges In A List
+            </div>
+            <div class="item range range-{{slider.range}}" ng-repeat="slider in buttonCtrl.data">
+                <i class="icon ion-ios-{{slider.name}}-outline"></i>
+                <input type="range" ng-model="slider.value" on-release='buttonCtrl.updateSlider(slider)' name="volume" min="0" max="100" value="{{slider.value}}">
+                <i class="icon ion-ios-{{slider.name}}"></i>
+            </div>
+            <div class="item">
+                <button class="button button-small button-assertive"
+                        ng-click="buttonCtrl.getSliders()">
+                    console logs
+                </button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar >
+        <div class="title">Last action by: {{buttonCtrl.lastAction.username}}</div>
+    </ion-footer-bar>
+</ion-view>

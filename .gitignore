@@ -1,5 +1,9 @@
 *.sh
 *.swap
+*.pkk
+*.pem
+*.pub
+.idea
 settings.json
 mup.json
 .meteor/local

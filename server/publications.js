@@ -26,3 +26,7 @@ Meteor.publishComposite('chats', function () {
     ]
   };
 });
+
+Meteor.publish('allSliders', function() {
+  return Sliders.find({});
+});
